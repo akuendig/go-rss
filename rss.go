@@ -7,7 +7,6 @@ import (
 	"encoding/xml"
 	"io/ioutil"
 	"net/http"
-	"time"
 )
 
 type Channel struct {
@@ -15,7 +14,7 @@ type Channel struct {
 	Link          string `xml:"link"`
 	Description   string `xml:"description"`
 	Language      string `xml:"language"`
-	LastBuildDate Date   `xml:"lastBuildDate"`
+	LastBuildDate string `xml:"lastBuildDate"`
 	Item          []Item `xml:"item"`
 }
 
@@ -28,7 +27,7 @@ type Item struct {
 	Title       string        `xml:"title"`
 	Link        string        `xml:"link"`
 	Comments    string        `xml:"comments"`
-	PubDate     string          `xml:"pubDate"`
+	PubDate     string        `xml:"pubDate"`
 	GUID        string        `xml:"guid"`
 	Category    []string      `xml:"category"`
 	Enclosure   ItemEnclosure `xml:"enclosure"`
